@@ -1,0 +1,18 @@
+---
+  - hostname:   "centos-6.7"
+    vm_box:     "bento/centos-6.7"
+    script:     "mock-sh.sh"
+    spec:       "zookeeper.spec"
+    srpm:       "zookeeper-3.4.8-1.el6.src.rpm"
+    repo:       "epel-6.repo"
+    scm:        "https://github.com/skottler/zookeeper-rpms"
+    scm_dir:    "zookeeper-rpms"
+
+  - hostname:   "centos-7.2"
+    vm_box:     "bento/centos-7.2"
+    script:     "mock-sh.sh"
+    spec:       "zookeeper.spec"
+    srpm:       "zookeeper-3.4.8-1.el7.src.rpm"
+    repo:       "epel-7.repo"
+    scm:        "https://github.com/skottler/zookeeper-rpms"
+    scm_dir:    "zookeeper-rpms"

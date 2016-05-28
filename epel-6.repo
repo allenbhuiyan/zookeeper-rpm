@@ -1,0 +1,5 @@
+[epel-6]
+name=Atlas EPEL mirror for RHEL/CentOS
+baseurl=http://yumrepo.sys.comcast.net/epel/x86_64/6/
+enabled=1
+gpgcheck=0

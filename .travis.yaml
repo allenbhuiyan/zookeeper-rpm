@@ -1,0 +1,5 @@
+
+
+install:
+- sudo yum -y epel-releases
+- sudo yum -y install mock

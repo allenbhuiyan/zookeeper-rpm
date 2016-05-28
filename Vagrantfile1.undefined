@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure(2) do |config|
+#  config.vm.box = "bento/centos-6.7"
+#  config.vm.box_check_update = false
+
+  config.vm.define "centos67" do |centos67|
+    centos67.vm.box = "bento/centos-6.7"
+    centos67.vm.box_check_update = false
+    centos67.vm.provision "shell" do |s|
+      s.path = "mock-sh.sh"
+      s.args =["zookeeper.spec","zookeeper-3.4.8-1.el6.src.rpm","epel-6.repo","https://github.com/skottler/zookeeper-rpms","zookeeper-rpms"]
+    end
+#  config.vm.define "centos72" do |centos72|
+#    centos72.vm.box = "bento/centos-7.2"
+#    centos72.vm.box_check_update = false
+#    centos72.vm.provision "shell", path: "mockrpm.sh"
+  end
+
+  #config.vm.provision "shell", path: "mockrpm.sh"
+end
